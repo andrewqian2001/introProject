@@ -1,0 +1,29 @@
+version: '3.8' # Specifies the version of Docker Compose file format
+
+services: # Defines the services (containers) to be run
+  web: # Name of the first service (container)
+    build: # Build configuration for the web service
+      context: . # The build context, i.e., the directory to use for the build
+      dockerfile: Dockerfile # The Dockerfile to use for building the image
+    ports:
+      - "8090:8090" # Maps port 8090 on the host to port 8090 on the container
+    volumes:
+      - ./logs:/logs # Mounts the host directory ./logs to /app/logs in the container
+    environment: # Sets environment variables for the container
+      - DD_AGENT_HOST=agent # Sets the Datadog agent host
+      - DD_ENV=local # Sets the Datadog environment tag
+      - DD_SERVICE=todo-app # Sets the Datadog service tag
+      - DD_VERSION=1.0.0 # Sets the Datadog version tag
+
+  agent: # Name of the second service (container)
+    image: datadog/agent:latest # Uses the latest Datadog agent image from Docker Hub
+    environment: # Sets environment variables for the agent container
+      - DD_API_KEY=${DD_API_KEY} # Sets the Datadog API key using an environment variable
+      - DD_APM_ENABLED=true # Enables Datadog APM (Application Performance Monitoring)
+      - DD_LOGS_ENABLED=true # Enables Datadog logs collection
+      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true # Collects logs from all containers
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro # Mounts the Docker socket to the container, read-only
+      - /proc/:/host/proc/:ro # Mounts the /proc directory to the container, read-only
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro # Mounts the cgroup directory to the container, read-only
+      - ./logs:/logs # Mounts the host directory ./logs to /logs in the agent container

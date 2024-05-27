@@ -1,0 +1,54 @@
+2024/05/23 17:45:21 Logging to file started
+2024/05/23 17:45:21 Server is starting on :8090
+2024/05/23 17:45:32 Started GET /getAllItems
+2024/05/23 17:45:32 getAllItems function: duration=142.291µs, items_count=0
+2024/05/23 17:45:32 Completed GET /getAllItems 200 232.375µs
+2024/05/23 17:45:37 Started POST /addItem
+2024/05/23 17:45:37 addItem function: new item added caveman
+2024/05/23 17:45:37 Completed POST /addItem 201 253.75µs
+2024/05/23 17:45:44 Started GET /getAllItems
+2024/05/23 17:45:44 getAllItems function: duration=108.958µs, items_count=1
+2024/05/23 17:45:44 Completed GET /getAllItems 200 213.916µs
+2024/05/23 17:46:15 Logging to file started
+2024/05/23 17:46:15 Server is starting on :8090
+2024/05/23 17:47:03 Started POST /addItem
+2024/05/23 17:47:03 addItem function: new item added caveman
+2024/05/23 17:47:03 Completed POST /addItem 201 629.875µs
+2024/05/23 17:47:10 Started POST /addItem
+2024/05/23 17:47:10 addItem function: new item added Learn go
+2024/05/23 17:47:10 Completed POST /addItem 201 173.416µs
+2024/05/23 17:47:15 Started GET /getAllItems
+2024/05/23 17:47:15 getAllItems function: duration=91.834µs, items_count=2
+2024/05/23 17:47:15 Completed GET /getAllItems 200 226.208µs
+2024/05/23 17:49:30 Started POST /addItem
+2024/05/23 17:49:30 addItem function: new item added Learn Kubernetes
+2024/05/23 17:49:30 Completed POST /addItem 201 92.542µs
+2024/05/23 17:49:34 Started GET /getAllItems
+2024/05/23 17:49:34 getAllItems function: duration=82.292µs, items_count=3
+2024/05/23 17:49:34 Completed GET /getAllItems 200 184.75µs
+2024/05/26 18:50:56 Logging to file started
+2024/05/26 18:50:56 Server is starting on :8090
+2024/05/26 18:51:03 Started POST /addItem
+2024/05/26 18:51:03 addItem function: new item added Learn go
+2024/05/26 18:51:03 Completed POST /addItem 201 276.541µs
+2024/05/26 18:51:08 Started GET /getAllItems
+2024/05/26 18:51:08 getAllItems function: duration=132.833µs, items_count=1
+2024/05/26 18:51:08 Completed GET /getAllItems 200 197.959µs
+2024/05/27 17:53:35 Logging to file started
+2024/05/27 17:53:35 Server is starting on :8090
+2024/05/27 17:56:05 Started POST /addItem
+2024/05/27 17:56:05 addItem function: new item added Learn go
+2024/05/27 17:56:05 Completed POST /addItem 201 11.2485ms
+2024/05/27 17:58:03 Logging to file started
+2024/05/27 17:58:03 Server is starting on :8090
+2024/05/27 17:58:39 Started POST /addItem
+2024/05/27 17:58:39 addItem function: new item added Learn go
+2024/05/27 17:58:39 Completed POST /addItem 201 9.600084ms
+2024/05/27 18:00:54 Logging to file started
+2024/05/27 18:00:54 Server is starting on :8090
+2024/05/27 18:01:35 Logging to file started
+2024/05/27 18:01:35 Server is starting on :8090
+2024/05/27 18:04:42 Logging to file started
+2024/05/27 18:04:42 Server is starting on :8090
+2024/05/27 18:08:02 Logging to file started
+2024/05/27 18:08:02 Server is starting on :8090
