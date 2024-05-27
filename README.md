@@ -27,7 +27,7 @@ DD_API_KEY=key_name
 
 # Notes:
 - the comments are written for me to look back on, sorry if they are clogging up the space.
-- I did not implement a datastore
+- I did not implement some optional features such as datastore, dd-trace-go 
 - Still a WIP
 
 # Questions:
