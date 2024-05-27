@@ -61,7 +61,10 @@ var client *statsd.Client
 
 func initStatsdClient() {
 	var err error
-	client, err = statsd.New("127.0.0.1:8125", statsd.WithTags([]string{"env:local", "service:todo-app", "version:1.0.0"}))
+	// 127.0.0.1: This is the loopback IP address, also known as localhost
+	//client, err = statsd.New("127.0.0.1:8125", statsd.WithTags([]string{"env:local", "service:todo-app", "version:1.0.0"}))
+	// host.docker.internal is a special DNS name that Docker provides to allow a container to communicate with the host machine.
+	client, err = statsd.New("host.docker.internal:8125", statsd.WithTags([]string{"env:local", "service:todo-app", "version:1.0.0"}))
 	if err != nil {
 		log.Fatalf("Failed to create StatsD client: %v", err)
 	}
