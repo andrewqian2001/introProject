@@ -4,22 +4,24 @@ Datadog intro project
 # Send HTTP requests
 Send request to add item:
 
+```
 curl --header "Content-Type: application/json" \
 --request POST \
 --data '{"title":"Learn go","description":"complete intern project"}' \
 http://localhost:8090/addItem
+```
 
 Send request to get all items:
-
+```
 curl --header "Accept: application/json" \
 --request GET \
 http://localhost:8090/getAllItems
-
+```
 Send request to mark item as completed
-
+```
 curl --request PUT \
 http://localhost:8090/completeItem?id=0
-
+```
 # Set API Key
 Create a .env file and set API Key
 
