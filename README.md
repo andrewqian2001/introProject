@@ -41,7 +41,13 @@ DD_API_KEY=key_name
 shouldn't this line of code in main.go (line 76) create a log folder if it doesnt exist?
 ![image](https://github.com/andrewqian2001/introProject/assets/51491033/3c90ebe6-2f92-40ef-8fc4-d187bca5b4eb)
 
+2. Having an issue with deployment
 
+Using this link https://docs.datadoghq.com/containers/kubernetes/installation/?tab=helm
+I'm trying to Add the Datadog Helm repository however im getting this error in step 2
 
+![image](https://github.com/andrewqian2001/introProject/assets/51491033/0650f72a-4e4b-48aa-8fce-edf0a5d65b66)
+
+Any advice would be appreciated, thanks!
 
 
