@@ -30,7 +30,7 @@ DD_API_KEY=key_name
 # Notes:
 - the comments are written for me to look back on, sorry if they are clogging up the space.
 - I did not implement some optional features such as datastore, dd-trace-go 
-- Still a WIP
+- Part I) is still a WIP
 
 # Questions:
 1. having issues with logging, a log folder isn't being created in the container
