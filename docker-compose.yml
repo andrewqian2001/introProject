@@ -1,7 +1,7 @@
 version: '3.8' # Specifies the version of Docker Compose file format
 
 services: # Defines the services (containers) to be run
-  web: # Name of the first service (container)
+  todo-app: # Name of the first service (container)
     build: # Build configuration for the web service
       context: . # The build context, i.e., the directory to use for the build
       dockerfile: Dockerfile # The Dockerfile to use for building the image

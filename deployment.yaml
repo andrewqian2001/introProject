@@ -1,0 +1,26 @@
+apiVersion: apps/v1 # Specifies the API version of Kubernetes resources
+kind: Deployment # Specifies that this YAML file defines a Deployment, a template for creating pods
+metadata:
+  name: todo-app # The name of the Deployment
+spec:
+  replicas: 1 # Number of desired replicas (pods) for this Deployment
+  selector:
+    matchLabels:
+      app: todo-app # The label selector to identify the pods managed by this Deployment
+  template:
+    metadata:
+      labels:
+        app: todo-app # The label applied to each pod created by this Deployment
+    spec:
+      containers:
+      - name: todo-app # The name of the container in the pod
+        image: your-dockerhub-username/todo-app:latest # The Docker image for the container
+        ports:
+        - containerPort: 8090 # The port the container listens on
+        volumeMounts:
+        - name: logs # The name of the volume to mount
+          mountPath: /logs # The path inside the container where the volume will be mounted
+      volumes:
+      - name: logs # The name of the volume
+        hostPath:
+          path: /path/to/host/logs # The path on the host machine to mount into the container
